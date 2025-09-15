@@ -8,18 +8,14 @@
 
 @font-face {
     font-family: Director-regular;
-    src: url(Director-Regular.otf);
+    src: url(./media/Director-Regular.otf);
 }
 
 @font-face {
     font-family: Director-bold;
-    src: url(Director-bold.otf);
+    src: url(./media/Director-Bold.otf);
 }
 
-@font-face {
-    font-family: Standard-book;
-    src: url(standard-book.otf);
-}
 
 body {
     background-repeat: no-repeat;
@@ -71,7 +67,6 @@ img{
     color: var(--pink);
     font-family: Director-bold;
     padding-right: 7px;
-    background-color: white;
     font-size: 1rem;
     overflow: hidden;
     border-right: .15em solid var(--pink);
@@ -80,6 +75,13 @@ img{
     animation: 
       typing 2.5s steps(20, end),
       blink-caret .75s step-end infinite;
+}
+
+.title2 {
+    color: var(--pink);
+    font-family: Director-bold;
+    padding-right: 7px;
+    font-size: 1rem;
 }
   
 @keyframes typing {
@@ -205,11 +207,32 @@ img{
   
 .hidden {
     opacity: 0;
-    visibility: hidden; /* flips after opacity finishes */
+    visibility: hidden;
 }  
+
+.playaround {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 h1 {
     font-family: Director-bold;
     color: var(--pink);
     font-size: 2rem;
+}
+
+button {
+    background-color: white;
+    border: solid black 1.5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    font-family: Director-bold;
+    font-size: 0.75rem;
+    cursor: pointer;
 }

@@ -12,12 +12,12 @@ $(document).ready(function() {
     $("#mebox").removeClass("bar");
   });
 
-  $(".laptop").on("click", function() {
-    $("#laptopbox").toggleClass("bar");
-  });
-  $("#laptopbox").on("click", function() {
-    $("#laptopbox").removeClass("bar");
-  });
+  // $(".laptop").on("click", function() {
+  //   $("#laptopbox").toggleClass("bar");
+  // });
+  // $("#laptopbox").on("click", function() {
+  //   $("#laptopbox").removeClass("bar");
+  // });
 
   $(".door").on("click", function() {
     $("#doorbox").toggleClass("bar");
@@ -40,11 +40,14 @@ $(document).ready(function() {
     $("#windowbox").removeClass("bar");
   });
 
+  const song = new Audio("./media/soap.mp3");
   $(".headphones").on("click", function() {
     $("#headphonesbox").toggleClass("bar");
+    song.play();
   });
   $("#headphonesbox").on("click", function() {
     $("#headphonesbox").removeClass("bar");
+    song.pause();
   });
 
   $(".job").on("click", function() {
