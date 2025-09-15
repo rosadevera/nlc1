@@ -2,7 +2,8 @@
 *{
     margin: 0%;
     padding: 0px;
-    box-sizing: border-box;       
+    box-sizing: border-box;
+    --pink: #e077b1;    
 }
 
 @font-face {
@@ -36,13 +37,6 @@ body {
      }
 }
 
-h1 {
-    font-family: Director-regular;
-    font-size: 24pt;
-    font-weight: 700;
-    padding-bottom: 14px;
-}
-
 a:hover {
     color:#ffffff;
     transition:cubic-bezier(0.165, 0.84, 0.44, 1)0.5s;
@@ -55,16 +49,17 @@ a {
 }
 
 .imghover img:hover {transform:scale(1.15);
-    filter: drop-shadow(0px 0px 10px #c877a3);
+    filter: drop-shadow(0px 0px 10px var(--pink));
 }
 
 img{
+    margin-left: 10%;
     transition: cubic-bezier(0.165, 0.84, 0.44, 1)0.75s;
 }
 
 .navcontainer {
     position:fixed;
-    top:2vh;
+    top:5vh;
     left:3vw;
     display: flex;
     flex-direction: column;
@@ -73,149 +68,30 @@ img{
     align-items: left;
 }
 
-.child1{
-    margin-top: 8vh;
-    margin-bottom: 40px;
-}
-
-.buttoncarelog {
-    transition: all ease-in cubic-bezier(0.645, 0.045, 0.355, 1) 1s;
-    border: 1px solid black;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    margin-bottom: 20px;
-    font-family: Director-regular;
-    font-size: 10pt;
-    text-align: center;
-    padding: 10px;
-    width:fit-content;
-    transform: rotate(8deg);
-}
-
-.buttoncarelog:hover {
-    transition: all ease-out 0.19s cubic-bezier(0.17, 0.67, 0.83, 0.67); 
-    transform: translateY(-2.5px);
-    color:#ffffff;
-    border: 1px solid #7BA362;
-    background: #7BA362;
-    cursor: pointer;
-    box-shadow: 0 0 15px #7BA362;
-    -webkit-animation: shake .75s ease-in-out infinite alternate;
-}
-
-
-.buttonflowerfield {
-    border: 1px solid black;
-    margin-bottom: 20px;
-    background-color: white;
-    font-family: Director-regular;
-    font-size: 10pt;
-    text-align: center;
-    padding: 10px;
-    width:fit-content;
-    transform: rotate(-4deg);
-}
-
-.buttonflowerfield:hover {
-    transition: all ease-out 0.19s cubic-bezier(0.17, 0.67, 0.83, 0.67); 
-    transform: translateY(-2.5px);
-    color:#ffffff;
-    border: 1px solid #7BA362;
-    background: #7BA362;
-    cursor: pointer;
-    box-shadow: 0 0 15px #7BA362;
-    -webkit-animation: shake .75s ease-in-out infinite alternate;
-}
-
-.buttonecosystem {
-    border: 1px solid black;
-    margin-bottom: 20px;
-    background-color: white;
-    font-family: Director-regular;
-    font-size: 10pt;
-    text-align: center;
-    padding: 10px;
-    width:fit-content;
-    transform: rotate(3deg);
-}
-
-.buttonecosystem:hover {
-    transition: all ease-out 0.19s cubic-bezier(0.17, 0.67, 0.83, 0.67); 
-    transform: translateY(-2.5px);
-    color:#ffffff;
-    border: 1px solid #7BA362;
-    background: #7BA362;
-    cursor: pointer;
-    box-shadow: 0 0 15px #7BA362;
-    -webkit-animation: shake .75s ease-in-out infinite alternate;
-}
-
-
-.flower {
-    position: absolute;
-    font-size: 40pt;
-    color: #7BA362;
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
-}
-
-@-moz-keyframes spin { 
-    100% { -moz-transform: rotate(360deg); } 
-}
-@-webkit-keyframes spin { 
-    100% { -webkit-transform: rotate(360deg); } 
-}
-@keyframes spin { 
-    100% { 
-        -webkit-transform: rotate(360deg); 
-        transform:rotate(360deg); 
-    } 
-}
-
-@-webkit-keyframes shake {
-    from {
-        -webkit-transform: rotate(5deg);
-    }
-    to {
-        -webkit-transform: rotate(-5deg);
-        -webkit-transform-origin: center center;
-    }
-  }
-
-.currentpage {
-    color: #7BA362;
+.title {
+    color: var(--pink);
     font-family: Director-bold;
-    padding: 10px;
+    padding: 5px;
     background-color: white;
-    font-size: 10pt;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid #7BA362; /* The typwriter cursor */
+    font-size: 1rem;
+    overflow: hidden;
+    border-right: .15em solid var(--pink); /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em; /* Adjust as needed */
     animation: 
-      typing 3.5s steps(40, end),
+      typing 2.5s steps(20, end),
       blink-caret .75s step-end infinite;
-  }
+}
   
-  /* The typing effect */
-  @keyframes typing {
+@keyframes typing {
     from { width: 0 }
     to { width: 100% }
-  }
+}
   
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
+@keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: #7BA362; }
-  }
-
-
-img {
-    margin-left: 10%;
-
+    50% { border-color: var(--pink); }
 }
 
 .pixelgreenhouse {
@@ -292,33 +168,6 @@ img {
     position:absolute;
     top:684px;
     left:110px
-}
-
-.bookgreenhouse:hover {
-    transform:scale(1.10);
-    filter: drop-shadow(0px 0px 10px #7BA362);
-}
-
-.cloudsgreenhouse {
-    position:absolute;
-    top:0px;
-    left:1242px
-}
-
-.cloudsgreenhouse:hover {
-    transform:scale(1.05);
-    filter: drop-shadow(0px 0px 12px #98c9ec);
-}
-
-.flowerfield {
-    position:absolute;
-    top:675px;
-    left:1340px
-}
-
-.flowerfield:hover {
-    transform:scale(1.04);
-    filter: drop-shadow(0px 0px 15px #f4b3ff);
 }
 
 .ecosystemgreenhouse {
