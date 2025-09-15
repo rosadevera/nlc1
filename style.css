@@ -5,8 +5,6 @@
     box-sizing: border-box;       
 }
 
-/* html, body { height: 4800px } */
-
 @font-face {
     font-family: Director-regular;
     src: url(Director-Regular.otf);
@@ -57,11 +55,11 @@ a {
 }
 
 .imghover img:hover {transform:scale(1.15);
-    filter: drop-shadow(0px 0px 10px #7BA362);
+    filter: drop-shadow(0px 0px 10px #c877a3);
 }
 
 img{
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1)0.5s;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1)0.75s;
 }
 
 .navcontainer {
@@ -214,29 +212,6 @@ img{
     50% { border-color: #7BA362; }
   }
 
-.musicnote {
-    position: fixed;
-    bottom: 2vh;
-    left:2vw;
-    font-size: 30pt;
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1)0.5s;
-    /* background-color: white; */
-}
-
-.musicnote:hover {
-    transform:scale(1.05);
-    filter: drop-shadow(0px 0px 2px #616161);
-    cursor: pointer;
-}
-
-.musicnote.paused {
-    position: fixed;
-    bottom: 2vh;
-    left:2vw;
-    font-size: 30pt;
-    color: #c7c7c7;
-    /* background-color: white; */
-}
 
 img {
     margin-left: 10%;
